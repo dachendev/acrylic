@@ -19,7 +19,7 @@ Ensure your browser is up to date to fully experience the acrylic effects.
 
 ## Customization
 
-You can customize the acrylic effects by modifying the CSS variables in `index.css`. For example:
+You can customize the acrylic effects by overriding the CSS variables in your own stylesheet. For example:
 
 - `--blur-amount`: Controls the amount of blur.
 - `--brightness-amount`: Controls the brightness.
