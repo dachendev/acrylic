@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      :root {
+        --background-source: url(assets/background.jpg);
+        --fallback-color: #fff;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: var(--background-source), var(--fallback-color);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .box {
+        position: absolute;
+        border-radius: 4px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .box1 {
+        width: 400px;
+        height: 225px;
+        top: 50px;
+        left: 50px;
+      }
+
+      .box2 {
+        --tint-color: #000;
+        border: 1px solid #1da1f2;
+        width: 400px;
+        height: 225px;
+        top: 200px;
+        left: 200px;
+      }
+
+      .box3 {
+        --tint-color: #333;
+        width: 400px;
+        height: 225px;
+        top: 100px;
+        left: 500px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1 acrylic"></div>
+    <div class="box box2 acrylic"></div>
+    <div class="box box3 acrylic">
+      <p>This is a simple content box.</p>
+    </div>
+  </body>
+</html>

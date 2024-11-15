@@ -1,0 +1,37 @@
+:root {
+  --blur-amount: 30px;
+  --brightness-amount: 1.2;
+  --tint-color: #fff;
+  --tint-opacity: 0.5;
+  --noise-source: url(assets/noise.svg);
+}
+
+.acrylic {
+  position: relative;
+  background: transparent !important;
+  backdrop-filter: blur(var(--blur-amount)) brightness(var(--brightness-amount));
+  isolation: isolate;
+}
+
+.acrylic::before,
+.acrylic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.acrylic::before {
+  mix-blend-mode: luminosity;
+  background: var(--tint-color);
+  opacity: var(--tint-opacity);
+  z-index: -2;
+}
+
+.acrylic::after {
+  background: var(--noise-source);
+  opacity: 0.2;
+  z-index: -1;
+}
